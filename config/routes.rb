@@ -18,9 +18,9 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
   
-  # authenticated :user do
-  #   root to: 'topics#index', as: :authenticated_root
-  # end
+  authenticated :user do
+    root to: 'topics#index', as: :authenticated_root
+  end
   
   root 'welcome#index'
 end
