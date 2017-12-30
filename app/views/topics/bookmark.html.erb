@@ -1,0 +1,7 @@
+<h1>Add Bookmark!</h1>
+
+<%= form_tag topic_add_path do %>
+    <label for="bookmark_url">Enter URL</label>
+    <%= text_field_tag :bookmark_url %>
+    <%= submit_tag("Submit") %>
+<% end %>

@@ -1,0 +1,7 @@
+<!--Bookmark controller will be added in the next story-->
+<h1>Remove Bookmarks!</h1>
+
+<%= link_to 'Remove', { :action => 'remove' }, method: :delete, data: { confirm: 'Are you sure?' }, id: 'delete' %>
+<% for bookmark in @bookmarks %>
+    <div><%= check_box_tag 'bookmark_id[]', bookmark.id, false %> <%= bookmark.url %></div>
+<% end %>
