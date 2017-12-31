@@ -10,7 +10,9 @@
   <div class="container">
     <ul class="nav nav-tabs">
       <div class="pull-left user-info">
-        Blocmarks
+        <% if user_signed_in? %>
+          <%= link_to "Blocmarks", topics_path %>
+        <% end %>
       </div>
       <div class="pull-right user-info">
         <% if user_signed_in? %>
