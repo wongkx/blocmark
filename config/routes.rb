@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
   resources :topics do
-    get '/bookmark' => 'topics#bookmark'
-    post '/add' => 'topics#add', as: :add
-    get '/bookmark_remove' => 'topics#bookmark_remove'
-    delete '/remove' => 'topics#remove', as: :remove
+    resources :bookmarks, except: [:index] 
   end
 
   devise_scope :user do

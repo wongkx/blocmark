@@ -58,3 +58,5 @@ gem 'devise'
 gem 'figaro'
 
 gem 'bootstrap-sass'
+
+gem 'bootstrap-modal-rails'

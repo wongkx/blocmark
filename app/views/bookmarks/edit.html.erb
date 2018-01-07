@@ -1,0 +1,3 @@
+<%= form_for [@topic, @bookmark], url: { controller: "bookmarks", action: "update", topic_id: @topic.id, id: @bookmark.id }, method: :put do |f| %>
+  <%= render 'update', f: f %>
+<% end %>
