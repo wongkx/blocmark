@@ -1,0 +1,6 @@
+$modal = $('.modal'),
+$modalBody = $('.modal .modal-body'),
+$modalHeading = $('.modal .modal-heading');
+$modalHeading.html("<%= @bookmark.url %>");
+$modalBody.html("<%= escape_javascript(render @bookmark) %>");
+$modal.modal();

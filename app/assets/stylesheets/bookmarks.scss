@@ -4,3 +4,20 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.bookmark {
+    vertical-align: text-bottom;
+}
+
+.url {
+    overflow-wrap: break-word;
+    align-items: center;
+}
+.edit-remove {
+    padding: 5px;
+}
+.bottom {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
