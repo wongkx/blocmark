@@ -25,7 +25,6 @@ class BookmarksController < ApplicationController
   def edit
     @bookmark = Bookmark.find(params[:id])
     @topic = Topic.find(params[:topic_id])
-    puts 'from edit action: ' + @topic.title
     respond_to do |format|
       format.html
       format.js
@@ -36,7 +35,7 @@ class BookmarksController < ApplicationController
   def update
     @bookmark = Bookmark.find(params[:id])
     @topic = Topic.find(params[:topic_id])
-    puts @bookmark.url
+    
     respond_to do |format|
       if @bookmark.update_attributes(params.require(:bookmark).permit(:url))
         format.html { redirect_to @topic, notice: 'Bookmark was successfully saved.' }

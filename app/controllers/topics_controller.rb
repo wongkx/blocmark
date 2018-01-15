@@ -66,7 +66,6 @@ class TopicsController < ApplicationController
   def bookmark_remove
     @topic = Topic.find(params[:topic_id])
     
-    logger.info("session info")
     @bookmarks = Bookmark.where(topic_id: params[:topic_id])
     @bookmarks.each do |bookmark|
       puts bookmark.url
